@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Course extends Model
 {
     use HasFactory;
+    //fillabel
+    //insertar varias instancias el tiempo 
+    protected $fillable=[ 'title' , 
+                            'description' ,
+                            'weeks' , 
+                            'enroll_cost' , 
+                            'minimum_skill' ,
+                            'bootcamp_id'
+                        ];
 }

@@ -15,13 +15,12 @@ return new class extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 100);
-            $table->text('description');
-            $table->string('website', 200);
-            $table->string('phone', 50);
-            $table->float('average_rating', 2, 2);
-            $table->decimal('average_cost', $precision = 8, $scale = 2);
-            $table->foreignId('user_id')->constrained();
+            $table->string('title', 100);
+            $table->string('description', 150);
+            $table->integer('weeks');
+            $table->float('enroll_cost', 2, 2);
+            $table->string('minimum_skill',180);
+            $table->foreignId('bootcamp_id')->constrained();
             $table->timestamps();
         });
     }
